@@ -115,7 +115,7 @@ nav li a:hover, nav li a.active{
     color: var(--red);
 }
 nav li.active{
-    background-color:var(--color-background);
+    background-color:var(--yellow);
 }
 /* Profile Card */
 .card {
