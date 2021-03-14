@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="theme-dark">
+{% load customtag %}
+{% load static %}
+    <head>
+        <title>{% block title %}Home{% endblock %} </title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Future Resume">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Aaron Hanna">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'home/hover.css' %}">
+        <script src="{% static 'home/web_ui.js' %}"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div>
+        <nav>
+            <ul>
+                <li class="hvr-float-shadow {% is_active request 'home' %}">
+                    <a href="{% url 'home' %}" class="{% is_active request 'home' %}">Home</a></li>
+                <li class="hvr-float-shadow {% is_active request 'about' %}">
+                    <a href="{% url 'about' %}" class="{% is_active request 'about' %}">About</a></li>
+                <li class="hvr-float-shadow {% is_active request 'work' %}">
+                    <a href="{% url 'work' %}" class="{% is_active request 'work' %}">Work</a></li>
+                <li class="hvr-pulse" style="float:right;" ><button class="mode" id="switch-mode">&#9728</button></li> 
+            </ul>
+        </nav>
+    </div>
+    <div class="mainheader">
+        <h1> Future of Me </h1>
+    </div>
+    </header>
+</div>
+{% block content %}
+<div class="flex">
+    <div class="card hvr-grow">
+        <img src="{% static 'home/profile.JPEG' %}" class="clip-circle" style="transform:translateY(25%);">
+    </div>
+    <div>
+        <h1> Aaron Hanna </h1>
+        <h3> Family Man </h3>
+        <h4> September '92 - </h4>
+    </div>
+</div>
+<div class="flex">
+    <div style="line-height: 2;">
+        <h2>Summary</h2>
+        <p>
+            It's the year 2051, I have turned myself entirely into a machine with fully functioning machine. 
+            Other notable accomplishments are included below.
+        </p>
+        <h2>List of Accomplishments (humble brag)</h2>
+        <ul>
+            <li>Successfully graduated from UCSD with Masters in Electrical Engineering with a focus in 
+                Machine Learning.
+            </li>
+            <li>
+                Created Hanna's Foundation for Children which supplies money to any child in need anywhere.
+            </li>
+            <li>
+                Founded the NoAdvert town in Western Colorado, where it is illegal to show adverts on any media.
+            </li>
+            <li>
+                Finished the book The Machinery of Freedom by David Friedman.
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Coding Languages:</h2>
+        <ul>
+            <li>Python</li><li>Matlab</li><li>C++</li><li>HTML/CSS</li><li>Javascript</li>
+        </ul>
+    </div>
+    
+
+</div>
+{% endblock %}
+<footer>
+    &copy: 2021 Aaron Hanna
+</footer>
+
+</body>
+</html>

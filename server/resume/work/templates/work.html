@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+{% load static %}
+{% block title %}Work{% endblock %}
+
+{% block content %}
+<div> <h2> Work Experience </h2></div>
+<div class="flex">
+<div class="card hvr-grow">
+<h3>SpaceX</h3>
+<p>Helped deploy the first colonization mission to Earth 2.0</p>
+<img src="{% static 'home/spacex.gif' %}" class="clip-circle">
+
+</div>
+<div class="card hvr-grow">
+<h3 ">Vertical Agriculture</h3>
+<p>Initiated efforts to make the US completely converted to vertical agriculture.</p>
+<img src="{% static 'home/vertag.jpg' %}" class="clip-circle">
+
+</div>
+<div class="card hvr-grow">
+<h3 ">Automated Robotics</h3>
+<p>Started the intitiative to make everything automated and everyone rich thats not rich.</p>
+<iframe width="240" height="240" src="https://www.youtube-nocookie.com/embed/llkr7a_3Y7s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+{% endblock %}

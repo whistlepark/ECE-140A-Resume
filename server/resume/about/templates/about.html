@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+<div>
+<h2>Family</h2>
+</div>
+
+<div class="flex">
+<div class="card hvr-grow">
+          <h2>My dog: Emmet</h2>
+          <img src="{% static '/home/Border-Collie-Shedding-900x500.jpg' %}" alt="Emmet" class="clip-circle" width="100%">
+</div>
+<div class="card hvr-grow">
+          <h2>My cat: Jupiter</h2>
+          <img src="{% static '/home/jupiter.jpg' %}" alt="Jupiter" class="clip-circle">
+</div>
+<div class="card hvr-grow">
+          <h2>My cat: Rocket</h2>
+          <img src="{% static '/home/rocket.JPG' %}" alt="Rocket" class="clip-circle moveup" >
+</div>
+</div>
+{% endblock %}
